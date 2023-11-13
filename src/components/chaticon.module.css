@@ -1,0 +1,10 @@
+.chaticon {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; 
+  }
+  .image{
+    border-radius: 0 !important;
+  }
