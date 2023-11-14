@@ -3,7 +3,7 @@
 
 
 <div align="center" >
-<img src="./src/assets//images/readme.jpeg" alt="Logo" width="350" height="200" >
+<img src="./src/assets//images/readme.jpeg" alt="Logo" width="500" height="300" >
 </div>
 
 ## Installation
