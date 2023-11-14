@@ -50,7 +50,9 @@
     padding: 0 60px;
     justify-content: start;
   }
-
+.sharedstyle{
+  cursor: pointer;
+}
   .messages{
     display: flex;
     justify-content: center;

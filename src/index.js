@@ -5,14 +5,34 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import {store} from './store'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Chatbox from './components/Chatbox';
+import WelcomePage from './components/WelcomePage';
 
+const router = createBrowserRouter([
+  {
+    path: "/main-page",
+    element: <App/>,
+  },
+  {
+    path: "/",
+    element: <WelcomePage/>,
+  },
+]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
+  <RouterProvider router={router}>
 
-  <Provider store={store}>
   <App />
+ 
+  </RouterProvider>
   </Provider>
+
 
   </React.StrictMode>
 );

@@ -53,7 +53,7 @@ export default function Chatbox({ onClose }) {
   const handleDeleteMessage = (index) => {
     dispatch(deleteMessage(index));
   };
-
+  
   // variables, css classes and styles that are applied conditionally based on the change of the prev state
  
   //classes variables
@@ -91,14 +91,14 @@ export default function Chatbox({ onClose }) {
               Buddy
             </div>
             <div className={classes.name}>
-            <AiOutlineDelete onClick={handleClearMessages} />
+            <AiOutlineDelete className={classes.sharedstyle} onClick={handleClearMessages} />
 
               {isMaximized ? (
-                <FiMinimize2 onClick={toggleBoxSize} />
+                <FiMinimize2 className={classes.sharedstyle} onClick={toggleBoxSize} />
               ) : (
-                <FiMaximize2 onClick={toggleBoxSize} />
+                <FiMaximize2 className={classes.sharedstyle} onClick={toggleBoxSize} />
               )}
-              <AiOutlineClose onClick={onClose} />
+              <AiOutlineClose className={classes.sharedstyle} onClick={onClose} />
 
             </div>
           </div>
@@ -125,6 +125,7 @@ export default function Chatbox({ onClose }) {
                   </p>
                 )}
                 <AiOutlineDelete
+                className={classes.sharedstyle}
                   size={25}
                   onClick={() => handleDeleteMessage(index)}
                 />
@@ -141,7 +142,7 @@ export default function Chatbox({ onClose }) {
               value={userInput}
               onChange={handleInputChange}
             />
-            <div className={classes.btn}>
+            <div  className={classes.btn}>
               <button onClick={handleInputSubmit}>
                 <BsFillSendFill /> {words.SEND[language]}
               </button>
